@@ -1,4 +1,4 @@
-{% set version = '2.1.6' %}
+{% set version = "2.1.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sunburstR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sunburstR/sunburstR_{{ version }}.tar.gz
-  sha256: 01d109f5c50966ee01594d9bc68089d9c1a54ca4375b83a2c3e4e4ea98360aa9
+  sha256: e617d192ad671aa370c40b240adfc26af7fa170cbc0fc04e85aae5990eaf8ee6
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -45,8 +45,7 @@ test:
 about:
   home: https://github.com/timelyportfolio/sunburstR
   license: MIT
-  summary: Make interactive 'd3.js' sequence sunburst diagrams in R with the convenience and
-    infrastructure of an 'htmlwidget'.
+  summary: Make interactive 'd3.js' sequence sunburst diagrams in R with the convenience and infrastructure of an 'htmlwidget'.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
