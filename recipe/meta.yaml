@@ -1,6 +1,5 @@
 {% set version = "2.1.8" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-sunburstr
@@ -13,8 +12,7 @@ source:
   sha256: e617d192ad671aa370c40b240adfc26af7fa170cbc0fc04e85aae5990eaf8ee6
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
